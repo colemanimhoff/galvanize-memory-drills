@@ -12,10 +12,6 @@ app.get('/api/v1/resolutions', (req, res) => {
     .catch(res => res.status(500).json({ error: error.message, stack: error.stack }))
 })
 
-// app.get("/", (request, response) => {
-//     response.status(200).send()
-// })
-
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use("/resolutions", resolutions)
